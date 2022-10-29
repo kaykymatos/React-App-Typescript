@@ -1,9 +1,12 @@
 import PageRoutes from "./routes/PageRoutes";
+import { UsuarioLogadoProvider } from "./shared/contexts";
 
 export const App = () => {
   return (
     <div>
-      <PageRoutes />
+      <UsuarioLogadoProvider>
+        <PageRoutes />
+      </UsuarioLogadoProvider>
     </div>
   );
 }
